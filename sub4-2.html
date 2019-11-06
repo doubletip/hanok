@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포토</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sub4-2.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+    <script>
+    	new WOW().init();
+        
+        $(function(){
+           $(".photo_txt").hide();
+           
+                    
+           $(".photo ul li").mouseenter(function(){
+               var i = $(this).index();
+               var aa = "a"+i;
+               $("."+aa).fadeIn();
+           });
+            $(".photo ul li").mouseleave(function(){
+              var i = $(this).index();
+             var aa = "a"+i;
+               $("."+aa).fadeOut();
+           });
+            
+            $(".more").click(function(e){
+                e.preventDefault();
+               $(".photo ul li:nth-child(odd)").css(
+"display","block"); 
+                $(".more").css("display","none");
+            });
+        });
+    </script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+		 $("header").load("index_header.html");
+			
+				    $(".quick_top").css({"opacity":"0","transition":"0.5s"})
+			var menu = $(".quick_top");
+            var contents = $(".scroll_num");
+            menu.click(function(event) {
+                event.preventDefault(); /*기존의 성질을 삭제*/
+
+                var tg = $(this);
+                var i = tg.index();
+
+                var section = contents.eq(i);
+                var tt = section.offset().top;
+
+
+
+                $('html, body').stop().animate({
+                    scrollTop: 0
+                }, 1000);
+            });
+
+            $(document).scroll(function() {
+                var sct = $(document).scrollTop();
+
+                contents.each(function() {
+                    var tg = $(this);
+                    var i = tg.index();
+
+                    if (tg.offset().top <= sct) {
+
+
+                        if (i == 0) {
+                            
+							$(".quick_top").css({"opacity":"0","transition":"0.5s"})
+                        }
+                        if (i > 0) {
+							$(".quick_top").css({"opacity":"1","transition":"0.5s"})
+                    
+                        }
+                    }
+
+                });
+            });
+			
+		
+			
+		});
+		
+		
+		$(document).ready(function(){
+			$("footer").load("index_footer.html");
+		});
+		
+		
+	
+	</script>
+	
+	
+</head>
+<body>
+	<!--header-->
+	<div id="cvcv">
+		<header class="scroll_num"></header>
+		    	<div class="quick_menu">
+		    		<ul class="quick_icon">
+		    			<li class="instagram">
+		    				<a href="#" class="insta"><i class="fa fa-instagram"></i></a>
+		    				<span class="quick_txt in">인스타그램</span>
+		    			</li>
+		    			<li class="twitter">
+		    				<a href="#" class="twit" ><i class="fa fa-twitter"></i></a>
+		    				<span class="quick_txt tw">트위터</span>
+		    			</li>
+		    			<li class="youtube">
+		    				<a href="#" class="youtu"><i class="fa fa-youtube"></i></a>
+		    				<span class="quick_txt yu">유튜브</span>
+		    			</li>
+		    			<li class="facebook">
+		    				<a href="#" class="fabook"><i class="fa fa-facebook-square"></i></a>
+		    				<span class="quick_txt fb">페이스북</span>
+		    			</li>
+		    		</ul>
+		    		<div class="quick_top">TOP</div>
+		    	</div>
+		    	<div class="m_qt">TOP</div>
+	</div>
+    	
+    	<div class="t_bg scroll_num">
+    		<h2>고객서비스</h2>
+    		<p>HOME > 고객서비스 > 포토 </p>
+    	</div>
+    	
+    	<section>
+    		<div id="section_1">
+    			<h2>포토</h2>	
+    		</div>
+    		
+    		<div id="section_2">
+               <div class="photo">
+                   <ul>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_1.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a0">
+                               <p>전주한옥마을의 멋진 전경 모습</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_2.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a1">
+                               <p>전주한옥마을 입구의 비석</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_3.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a2">
+                               <p>전동성당 앞</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_4.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a3">
+                               <p>풍남문의 야경</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_5.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a4">
+                               <p>천주교 전주교구 전동성당</p>
+                           </div>
+                       </li>
+                       <li>
+                          <div class="photo_imgbx">
+                                <img src="images/photo/photo_6.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a5">
+                               <p>경기전</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_7.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a6">
+                               <p>벽화마을 하트벽</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_8.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a7">
+                               <p>벽화마을 드림캐쳐</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="photo_imgbx">
+                               <img src="images/photo/photo_9.jpg" alt="포토사진">
+                           </div>
+                           <div class="photo_txt a8">
+                               <p>벽화마을 만화벽</p>
+                           </div>
+                       </li>
+                   </ul>
+               </div>
+               
+               <div class="more">
+                   <p>더보기</p>
+               </div>
+            </div>
+    	</section>
+
+  
+  	
+      
+      
+
+		
+
+	<footer id="footer"></footer>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+				$(".instagram").mouseover(function(){
+				$(".in").css("opacity","1");
+			});
+			
+			$(".instagram").mouseleave(function(){
+				$(".in").css("opacity","0");
+			});
+			
+			$(".twitter").mouseover(function(){
+				$(".tw").css("opacity","1");
+			});
+			
+			$(".twitter").mouseleave(function(){
+				$(".tw").css("opacity","0");
+			});
+			
+			$(".youtube").mouseover(function(){
+				$(".yu").css("opacity","1");
+			});
+			
+			$(".youtube").mouseleave(function(){
+				$(".yu").css("opacity","0");
+			});
+			
+			$(".facebook").mouseover(function(){
+				$(".fb").css("opacity","1");
+			});
+			
+			$(".facebook").mouseleave(function(){
+				$(".fb").css("opacity","0");
+			});
+			$(".m_qt").click(function(){
+				$("html,body").animate({scrollTop:0},500);
+			});
+	
+		});
+		
+		
+	</script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sub4-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+    <script>
+    	new WOW().init();
+        
+    </script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+		 $("header").load("index_header.html");
+			
+				    $(".quick_top").css({"opacity":"0","transition":"0.5s"})
+			var menu = $(".quick_top");
+            var contents = $(".scroll_num");
+            menu.click(function(event) {
+                event.preventDefault(); /*기존의 성질을 삭제*/
+
+                var tg = $(this);
+                var i = tg.index();
+
+                var section = contents.eq(i);
+                var tt = section.offset().top;
+
+
+
+                $('html, body').stop().animate({
+                    scrollTop: 0
+                }, 1000);
+            });
+
+            $(document).scroll(function() {
+                var sct = $(document).scrollTop();
+
+                contents.each(function() {
+                    var tg = $(this);
+                    var i = tg.index();
+
+                    if (tg.offset().top <= sct) {
+
+
+                        if (i == 0) {
+                            
+							$(".quick_top").css({"opacity":"0","transition":"0.5s"})
+                        }
+                        if (i > 0) {
+							$(".quick_top").css({"opacity":"1","transition":"0.5s"})
+                    
+                        }
+                    }
+
+                });
+            });
+			
+		
+			
+		});
+		
+		
+		$(document).ready(function(){
+			$("footer").load("index_footer.html");
+		});
+		
+		
+	
+	</script>
+	
+	
+</head>
+<body>
+	<!--header-->
+	<div id="cvcv">
+		<header class="scroll_num"></header>
+		    	<div class="quick_menu">
+		    		<ul class="quick_icon">
+		    			<li class="instagram">
+		    				<a href="#" class="insta"><i class="fa fa-instagram"></i></a>
+		    				<span class="quick_txt in">인스타그램</span>
+		    			</li>
+		    			<li class="twitter">
+		    				<a href="#" class="twit" ><i class="fa fa-twitter"></i></a>
+		    				<span class="quick_txt tw">트위터</span>
+		    			</li>
+		    			<li class="youtube">
+		    				<a href="#" class="youtu"><i class="fa fa-youtube"></i></a>
+		    				<span class="quick_txt yu">유튜브</span>
+		    			</li>
+		    			<li class="facebook">
+		    				<a href="#" class="fabook"><i class="fa fa-facebook-square"></i></a>
+		    				<span class="quick_txt fb">페이스북</span>
+		    			</li>
+		    		</ul>
+		    		<div class="quick_top">TOP</div>
+		    	</div>
+		    	<div class="m_qt">TOP</div>
+	</div>
+    	
+    	<div class="t_bg scroll_num">
+    		<h2>고객서비스</h2>
+    		<p>HOME > 고객서비스 > 이벤트 </p>
+    	</div>
+    	
+    	<section>
+    		<div id="section_1">
+    			<h2>이벤트</h2>	
+    		</div>
+    		
+    		<div id="section_2">
+                <div class="event">
+                    <ul class="event_cover">
+                        <li class="event_list">
+                            <img src="images/event/event1.png" alt="이벤트사진">
+                            <p class="event_tit">서학동 사진관 무료 행사 이벤트(~10/25)</p>
+                            <p class="event_stit">5일간 서학동사진관에서 무료로 증명사진을 찍어드려요.</p>
+                            <p class="event_date">10/21 ~ 10/25</p>
+                            <div class="event_bx">진행중</div>
+                        </li>
+                        <li class="event_list">
+                            <img src="images/event/event2.png" alt="이벤트사진">
+                            <p class="event_tit">한벽당 인스타그램 이벤트(~10/31)</p>
+                            <p class="event_stit">사진을 찍고 인스타그램에 올리면 상품을 드려요.</p>
+                            <p class="event_date">10/10 ~ 10/31</p>
+                            <div class="event_bx">진행중</div>
+                        </li>
+                        <li class="event_list">
+                            <img src="images/event/event3.png" alt="이벤트사진">
+                            <p class="event_tit">아이유와 함께하는 체험 이벤트(10/31)</p>
+                            <p class="event_stit">가수 겸 배우 아이유와 함께 수공예품 체험을 해보세요.</p>
+                            <p class="event_date">10/31</p>
+                            <div class="event_bx">진행중</div>
+                        </li>
+                        <li class="event_list">
+                            <img src="images/event/event4.png" alt="이벤트사진">
+                            <p class="event_tit">한복데이(~10/31)</p>
+                            <p class="event_stit">토,일 한옥마을에 오신 분들에게 한복을 무료로 제공합니다.</p>
+                            <p class="event_date">10/1 ~ 10/31</p>
+                            <div class="event_bx">진행중</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+    	</section>
+
+  
+  	
+      
+      
+
+		
+
+	<footer id="footer"></footer>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+				$(".instagram").mouseover(function(){
+				$(".in").css("opacity","1");
+			});
+			
+			$(".instagram").mouseleave(function(){
+				$(".in").css("opacity","0");
+			});
+			
+			$(".twitter").mouseover(function(){
+				$(".tw").css("opacity","1");
+			});
+			
+			$(".twitter").mouseleave(function(){
+				$(".tw").css("opacity","0");
+			});
+			
+			$(".youtube").mouseover(function(){
+				$(".yu").css("opacity","1");
+			});
+			
+			$(".youtube").mouseleave(function(){
+				$(".yu").css("opacity","0");
+			});
+			
+			$(".facebook").mouseover(function(){
+				$(".fb").css("opacity","1");
+			});
+			
+			$(".facebook").mouseleave(function(){
+				$(".fb").css("opacity","0");
+			});
+			$(".m_qt").click(function(){
+				$("html,body").animate({scrollTop:0},500);
+			});
+	
+		});
+		
+		
+	</script>
+	
+	
+</body>
+</html>
