@@ -13,6 +13,7 @@ section {position: relative; width: 100%;}
 #section_1 h2:after {content:""; display: block; width: 15%; height: 1px; background: black; margin: 0 auto; margin-top:2%;}
 
 .s1 {position: relative; width: 85%; margin: 0 auto;}
+.s1 iframe {width: 100%;}
 .map_txt {text-align: center; margin-top: 50px;}
 .map_address {font-size: 26px; line-height: 60px;}
 .map_tel {font-size: 16px; line-height: 20px;}

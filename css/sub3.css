@@ -15,6 +15,8 @@ section {position: relative; width: 100%;}
 
 #section_2 {position: relative; width: 100%; max-width: 1400px; margin: 0 auto;}
 #section_2 .s2 {}
+.s2_ggmap iframe {width: 100%;}
+.s2_ggtb table {width: 100%; border: 0px;}
 #section_2 .s2 .s2_ggtb {margin-top: 3%;}
 #section_2 .s2 .s2_ggtb .ggn {font-size: 1.2vw; padding-bottom: 2%; font-weight: bold;}
 .ggt , .ggb {text-align: center; width: 100%;}
@@ -25,6 +27,8 @@ section {position: relative; width: 100%;}
 #section_3 {position: relative; width: 100%; max-width: 1400px; margin: 0 auto; padding-top: 10px;}
 #section_3 > h2 {text-align: center; margin-top: 10%; margin-bottom: 5%; font-size: 2vw;}
 #section_3 h2:after {content:""; display: block; width: 15%; height: 1px; background: black; margin: 0 auto; margin-top: 2%;}
+.s3_pkmap iframe {width: 100%;}
+.s3_pktb table {width: 100%; border: 0px;}
 #section_3 .s3 {width: 100%; margin:0 auto;}
 #section_3 .s3 .s3_pktb {margin-top: 3%;}
 #section_3 .s3 .s3_pktb .pkn {font-size: 1.2vw; padding-bottom: 2%; font-weight: bold;}
@@ -40,6 +44,8 @@ section {position: relative; width: 100%;}
 #section_4 h2:after {content:""; display: block; width: 35%; height: 1px; background: black; margin: 0 auto; margin-top: 2%;}
 
 #section_4 .s4 {width: 100%; margin:0 auto;}
+.s4_busmap iframe {width: 100%;}
+.s4_bustb table {width: 100%; border: 0px;}
 #section_4 .s4 .s4_bustb {margin-top: 3%;}
 #section_4 .s4 .s4_bustb .busn {font-size: 1.2vw; padding-bottom: 2%; font-weight: bold;}
 .bust , .busb {text-align: center;}
